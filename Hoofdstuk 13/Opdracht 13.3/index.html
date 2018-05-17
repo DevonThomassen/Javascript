@@ -1,0 +1,191 @@
+<!--
+    Opdracht:       Javascript
+    Auteur:         Devon Thomassen
+    Datum + tijd:   13-5-2018 21:27
+    Bestandsnaam:   
+    Editor:         PhpStorm
+-->
+
+<!doctype html>
+<html>
+<head>
+	<title>
+	</title>
+	<script src="script.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta name="description" content="">
+	<meta name="keywords" content="HTML,">
+	<meta charset="utf-8">
+	<style>
+		table, th, tr, td {
+			border: black 2px solid;
+		}
+		th {
+			background: mediumspringgreen;
+		}
+	</style>
+</head>
+<body>
+<h1>Top 10 cryptocurrencies ranking</h1>
+<table id="cryptoData">
+	<tbody>
+	<tr>
+		<th data-key="rank">#</th>
+		<th data-key="symbol">Symbol</th>
+		<th data-key="name">Name</th>
+		<th data-key="market_cap_usd">Market Cap</th>
+		<th data-key="price_usd">Price</th>
+		<th data-key="available_supply">Circulating Supply</th>
+		<th data-key="percent_change_1h">Change (1h)</th>
+		<th data-key="percent_change_24h">Change (24h)</th>
+		<th data-key="percent_change_7d">Change (7d)</th>
+		<th>Refresh data</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td id="row1_0"></td>
+		<td id="row1_1"></td>
+		<td id="row1_2"></td>
+		<td id="row1_3"></td>
+		<td id="row1_4"></td>
+		<td id="row1_5"></td>
+		<td id="row1_6"></td>
+		<td id="row1_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td id="row2_0"></td>
+		<td id="row2_1"></td>
+		<td id="row2_2"></td>
+		<td id="row2_3"></td>
+		<td id="row2_4"></td>
+		<td id="row2_5"></td>
+		<td id="row2_6"></td>
+		<td id="row2_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td id="row3_0"></td>
+		<td id="row3_1"></td>
+		<td id="row3_2"></td>
+		<td id="row3_3"></td>
+		<td id="row3_4"></td>
+		<td id="row3_5"></td>
+		<td id="row3_6"></td>
+		<td id="row3_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td id="row4_0"></td>
+		<td id="row4_1"></td>
+		<td id="row4_2"></td>
+		<td id="row4_3"></td>
+		<td id="row4_4"></td>
+		<td id="row4_5"></td>
+		<td id="row4_6"></td>
+		<td id="row4_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td id="row5_0"></td>
+		<td id="row5_1"></td>
+		<td id="row5_2"></td>
+		<td id="row5_3"></td>
+		<td id="row5_4"></td>
+		<td id="row5_5"></td>
+		<td id="row5_6"></td>
+		<td id="row5_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td id="row6_0"></td>
+		<td id="row6_1"></td>
+		<td id="row6_2"></td>
+		<td id="row6_3"></td>
+		<td id="row6_4"></td>
+		<td id="row6_5"></td>
+		<td id="row6_6"></td>
+		<td id="row6_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td id="row7_0"></td>
+		<td id="row7_1"></td>
+		<td id="row7_2"></td>
+		<td id="row7_3"></td>
+		<td id="row7_4"></td>
+		<td id="row7_5"></td>
+		<td id="row7_6"></td>
+		<td id="row7_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>
+		</td>
+		<td id="row8_0"></td>
+		<td id="row8_1"></td>
+		<td id="row8_2"></td>
+		<td id="row8_3"></td>
+		<td id="row8_4"></td>
+		<td id="row8_5"></td>
+		<td id="row8_6"></td>
+		<td id="row8_7">
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td id="row9_0"></td>
+		<td id="row9_1"></td>
+		<td id="row9_2"></td>
+		<td id="row9_3"></td>
+		<td id="row9_4"></td>
+		<td id="row9_5"></td>
+		<td id="row9_6"></td>
+		<td id="row9_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td id="row10_0"></td>
+		<td id="row10_1"></td>
+		<td id="row10_2"></td>
+		<td id="row10_3"></td>
+		<td id="row10_4"></td>
+		<td id="row10_5"></td>
+		<td id="row10_6"></td>
+		<td id="row10_7"></td>
+		<td>
+			<button>Refresh deze munt</button>
+		</td>
+	</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<button id="refreshAll">Vernieuw alle cryptos</button>
+</body>
+</html>
